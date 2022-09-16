@@ -1,0 +1,35 @@
+<div class="col-12 col-lg-12">
+    <div *ngIf="inventarioSeleccionado===null" class="card flex-fill">
+        <div class="card-header">
+            <h5 class="card-title mb-0"><br><i class="fa fa-book" aria-hidden="true"></i> Listado de Inventario</h5>
+        </div>
+        <table class="table table-hover my-0">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th class="d-none d-xl-table-cell">fecha</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let inventa of inventario">
+                    <td>{{inventa.nombre}}</td>
+                    <td>{{inventa.correo}}</td>
+                    <td class="d-none d-xl-table-cell">{{inventa.fechaCreacion | date:'yyyy-MM-dd'}}</td>
+                    <td><a role="button" (click)="seleccionarInventario(inventa)"><button><i  class="icono fa fa-check-square" aria-hidden="true"></i></button>
+                    </a>
+                        <a role="button" [routerLink]="['editar',inventa.id]"><button><i  class=" fa fa-pencil" aria-hidden="true"></i></button>
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container">
+            <br>
+            <a [routerLink]="['nuevo']" class="btn btn-success pull-right">
+          Registrar
+        </a>
+        </div>
+    </div>
+    <app-movimiento-inventario [inventario]="inventarioSeleccionado" *ngIf="inventarioSeleccionado!==null"></app-movimiento-inventario>
+</div>

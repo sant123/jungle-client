@@ -1,0 +1,10 @@
+.alert-danger {
+    color: brown;
+    background: rgb(228, 129, 189);
+    border-color: rgb(231, 148, 148);
+    margin-bottom: 5px;
+}
+
+.container-error-message {
+    padding: 3px;
+}

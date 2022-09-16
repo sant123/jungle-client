@@ -1,0 +1,108 @@
+<div class="row">
+    <h1 class="h3 mb-3"><strong>Inventario:</strong> {{inventario.nombre}} </h1>
+</div>
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Listado de productos</h5>
+        </div>
+        <table class="table table-hover my-0">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th class="d-none d-xl-table-cell">fecha</th>
+                    <th>Cantidad</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movimiento of movimientoInventario">
+                    <td>{{movimiento.nombreProducto}}</td>
+                    <td class="d-none d-xl-table-cell">{{movimiento.fechaCreacion | date:'yyyy-MM-dd'}}</td>
+                    <td>{{movimiento.cantidad}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+</div>
+<br>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Producto</button>
+<input type="button" class="btn btn-primary pull-right" value="Volver" click="history.go(-1);">
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Productos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formularioMovimientoInventario">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Tipo Movimiento:</label>
+
+                        <select class="form-select" aria-label="Default select example" formControlName="IdTipoMovimientoInventario" [class.is-invalid]="IdTipoMovimientoInventarioNovalido">
+                          <small *ngIf="IdTipoMovimientoInventarioNovalido" class="text-danger"></small>
+                          <option selected>Seleccione Tipo de Movimiento</option>
+                          <option [value]="tipos.id" *ngFor="let tipos of tipoMovimientoInventarios">
+                          {{tipos.nombre}}</option>
+
+
+                        </select>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Lista Productos:</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="IdProductos" [class.is-invalid]="IdProductosNovalido">
+                          <small *ngIf="IdProductosNovalido" class="text-danger"></small>
+                          <option selected>Seleccione Tipo de Productos</option>
+                          <option [value]="producto.id" *ngFor="let producto of productos">{{producto.nombre}}</option>
+
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group ">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="text" class="form-control " placeholder="cantidad" formControlName="Cantidad" [class.is-invalid]="CantidadNovalido">
+                        <small *ngIf="CantidadNovalido" class="text-danger">Ingrese 3 caracteristicas</small>
+
+                    </div>
+
+
+
+
+
+                    <div class="modal-footer">
+
+                        <button type="submit" [disabled]="formularioMovimientoInventario.invalid" class="btn btn-primary" (click)="registrarMovimientoInventario()" data-dismiss="modal">Registrar</button>
+
+                    </div>
+
+
+                </form>
+
+
+
+
+
+            </div>
+        </div>

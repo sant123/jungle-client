@@ -1,0 +1,80 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Registrar Producto</h5>
+        </div>
+        <div class="container">
+            <form [formGroup]="formularioProducto" (ngSubmit)="registrarProducto()">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="nombreClub">Nombre</label>
+                            <input type="text" class="form-control " placeholder="Nombre" formControlName="Nombre" [class.is-invalid]="NombreNovalido">
+                            <small *ngIf="NombreNovalido" class="text-danger">Ingrese 5 letras</small>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="fechadecreacion">Valor Unitario</label>
+                            <input type="number" class="form-control has-danger" placeholder="$$" formControlName="ValorUnitario" [class.is-invalid]="ValorUnitarioNovalido">
+                            <small *ngIf="ValorUnitarioNovalido" class="text-danger">Ingrese 5 letras</small>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="direccionClub">Referecia de Marca</label>
+                            <input type="text" class="form-control has-danger" placeholder="EJRolda" formControlName="RefereciaMarca" [class.is-invalid]="RefereciaMarcaNovalido">
+                            <small *ngIf="RefereciaMarcaNovalido" class="text-danger">Ingrese 5 letras</small>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+
+                            <label for="nombreClub">Tipo de Producto</label>
+
+                            <select class="form-select" aria-label="Default select example" formControlName="IdTipoProducto" [class.is-invalid]="IdTipoProductoNovalido">
+                              <small *ngIf="IdTipoProductoNovalido" class="text-danger">Ingrese 5 letras</small>
+
+
+                    <option selected>Seleccione Tipo de Producto </option>
+                    <option [value]="productos.id" *ngFor="let productos of tipoProductos">{{productos.nombre}}</option>
+
+                  </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="direccionClub">Fecha de Creacion</label>
+                            <input type="text" class="form-control has-danger" placeholder="12/12/1900" formControlName="FechaCreacion" [class.is-invalid]="FechaCreacionNovalido">
+                            <small *ngIf="FechaCreacionNovalido" class="text-danger">Ingrese 5 letras</small>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <button type="submit" [disabled]="formularioProducto.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idProductosActualizar === null ?'Registrar':'Actualizar'}}</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

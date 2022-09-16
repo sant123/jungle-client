@@ -1,0 +1,12 @@
+.icono {
+    /* width: 15%;
+    height: 15%; */
+    background-color: rgb(56, 176, 9);
+    /* border-radius: 5000px; */
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    justify-content: center;
+    transition: 3.ease all;
+}

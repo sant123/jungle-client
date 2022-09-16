@@ -1,0 +1,115 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Registrar Persona</h5>
+        </div>
+        <div class="container">
+            <form [formGroup]="formularioPersona" (ngSubmit)="registrarPersona()">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="nombre">Nombres</label>
+                            <input type="text" class="form-control " placeholder="Nombre" formControlName="Nombre" [class.is-invalid]="NombreNovalido">
+                            <small *ngIf="NombreNovalido" class="text-danger">Ingrese 3 letras</small>
+
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" class="form-control " placeholder="Apellido" formControlName="Apellido" [class.is-invalid]="ApellidoNovalido">
+                            <small *ngIf="ApellidoNovalido" class="text-danger">Ingrese 3 letras</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label for="direccionClub">Direccion</label>
+                            <input type="text" class="form-control has-danger" placeholder="Direccion" formControlName="Direccion" [class.is-invalid]="DireccionNovalido">
+                            <small *ngIf="DireccionNovalido" class="text-danger">Ingrese 5 letras</small>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+
+                            <label for="direccionClub">Telefono</label>
+                            <input type="number" class="form-control has-danger" placeholder="310256" formControlName="Telefono" [class.is-invalid]="DireccionNovalido">
+                            <small *ngIf="DireccionNovalido" class="text-danger">Ingrese 5 letras</small>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="nombreClub">Tipo Documento</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="IdTipoDocumento" [class.is-invalid]="IdTipoDocumentoNovalido">
+                              <small *ngIf="IdTipoDocumentoNovalido" class="text-danger">Escoja una opcion</small>
+                              <option selected>Seleccione Tipo Documento</option>
+                              <option [value]="tipoDocumento.id" *ngFor="let tipoDocumento of tipoDocumentos">{{tipoDocumento.nombre}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="nombreClub">Numero Documento</label>
+                            <input type="number" class="form-control " placeholder="103125" formControlName="NumeroDocumento" [class.is-invalid]="NumeroDocumentoNovalido">
+                            <small *ngIf="NumeroDocumentoNovalido" class="text-danger">Escoja una opcion</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label for="direccionClub">Correo</label>
+                            <input type="text" class="form-control has-primary" placeholder="pepito@" formControlName="Correo" [class.is-invalid]="CorreoNovalido">
+                            <small *ngIf="CorreoNovalido" class="text-danger">Escoja una opcion</small>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+
+                            <label for="direccionClub">Fecha Nacimiento</label>
+                            <input type="text" class="form-control has-danger" placeholder="30/12/2022" formControlName="FechaNacimiento" [class.is-invalid]="FechaNacimientoNovalido">
+                            <small *ngIf="FechaNacimientoNovalido" class="text-danger">Escoja una opcion</small>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-group ">
+                        <label for="nombreClub">Rol</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="IdRol" [class.is-invalid]="IdRolNovalido">
+                          <small *ngIf="IdRolNovalido" class="text-danger">Escoja un rol</small>
+>
+                        <option selected>Seleccione Rol</option>
+                        <option [value]="usuarioXrol.id" *ngFor="let usuarioXrol of roles">{{usuarioXrol.nombre}}</option>
+                      </select>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- <button type="submit" class="btn waves-effect waves-light btn-block btn-info pull-right">Registrar</button> -->
+
+                        <button type="submit" [disabled]="formularioPersona.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idPersonaActualizar === null ?'Registrar':'Actualizar'}}</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

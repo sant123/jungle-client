@@ -1,0 +1,60 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Registrar Servicios</h5>
+        </div>
+        <div class="container">
+            <form [formGroup]="formularioServicio" (ngSubmit)="registrarServicios()">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group ">
+                            <label for="Nombre">Nombre</label>
+
+                            <input type="text" class="form-control " placeholder="corte" formControlName="Nombre" [class.is-invalid]="nombreNovalido">
+                            <small *ngIf="nombreNovalido" class="text-danger">Ingrese 6 letras</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="Valor">Valor</label>
+
+                            <input type="number" class="form-control has-danger" placeholder="$$" formControlName="Valor" [class.is-invalid]="caracteristicaNovalidas">
+                            <small *ngIf="caracteristicaNovalidas" class="text-danger">Ingrese 5 digitos</small>
+
+                        </div>
+                    </div>
+                    <!--
+                          <div class="col-lg-4">
+                              <div class="form-group">
+                                  <label for="FechaCreacion">Fecha de Creacion</label>
+                                  <input type="text" class="form-control has-danger" placeholder="12/12/1900" formControlName="FechaCreacion">
+
+                              </div>
+                          </div> -->
+
+                </div>
+
+
+                <br>
+                <div class="col-lg-2">
+                    <button type="submit" [disabled]="formularioServicio.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idServiciosActualizar === null ?'Registrar':'Actualizar'}}</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- <hr>
+<pre>
+  estado del formu:{{formularioServicio.valid}}
+  <br>
+Status:{{formularioServicio.status}}
+</pre>
+
+<pre>
+  {{formularioServicio.value  |json}}
+</pre> -->

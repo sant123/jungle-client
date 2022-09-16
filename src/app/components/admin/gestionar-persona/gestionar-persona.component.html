@@ -1,0 +1,33 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+            <h5 class="card-title mb-0"><br> <i class="fa fa-user" aria-hidden="false"></i> Listado de personas</h5>
+        </div>
+        <table class="table table-hover my-0">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Rol</th>
+                    <!-- <th class="d-none d-md-table-cell">Roles</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of personas">
+                    <td>{{persona.usuario}}</td>
+                    <td>{{persona.nombre}}</td>
+                    <td><span>{{persona.telefono}}</span></td>
+                    <td><span class="badge bg-success">{{persona.rolUsuario}}</span></td>
+                    <a role="button" [routerLink]="['editar',persona.id]"><button>
+                      <i  class=" fa fa-pencil" aria-hidden="true"></i></button>
+                    </a>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container">
+            <a [routerLink]="['nuevo']" class="btn btn-success pull-right">
+              Registrar
+            </a>
+        </div>
+    </div>

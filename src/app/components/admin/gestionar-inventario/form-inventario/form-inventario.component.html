@@ -1,0 +1,37 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Registrar Inventario</h5>
+        </div>
+        <div class="container">
+            <form [formGroup]="formularioInventario" (ngSubmit)="registrarInventario()">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group ">
+                            <label for="nombreClub">Nombre</label>
+                            <input type="text" class="form-control " placeholder="Nombre" formControlName="Nombre" [class.is-invalid]="NombreNovalido">
+                            <small *ngIf="NombreNovalido" class="text-danger">Ingrese 3 caracteristicas</small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="submit" [disabled]="formularioInventario.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idInventarioActualizar === null ?'Registrar':'Actualizar'}}</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

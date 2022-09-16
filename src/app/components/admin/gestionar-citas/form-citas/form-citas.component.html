@@ -1,0 +1,54 @@
+<div class="col-12 col-lg-12">
+    <div class="card flex-fill">
+        <div class="card-header">
+
+            <h5 class="card-title mb-0">Registrar Citas</h5>
+        </div>
+        <div class="container">
+            <form [formGroup]="formularioCitas" (ngSubmit)="registrarCita()">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group ">
+                            <label for="nombreClub">Hora Cita</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="horas" [class.is-invalid]="horasNovalido">
+                            <small *ngIf="horasNovalido" class="text-danger">Escoja una hora</small>
+                            <option selected>Seleccione Hora Cita</option>
+                            <option value="horas" *ngFor="let hora of horas">{{hora}}</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="direccionClub">Fecha Cita</label>
+                            <input type="text" class="form-control has-danger" placeholder="30/12/2022" formControlName="fecha de cita" [class.is-invalid]="FechaNovalido">
+                            <small *ngIf="FechaNovalido" class="text-danger">Escoja una opcion</small>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <br>
+                <div class="col-lg-2">
+                    <button type="submit" [disabled]="formularioCitas.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idCitaActualizar === null ?'Registrar':'Actualizar'}}</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- <hr>
+<pre>
+estado del formu:{{formularioServicio.valid}}
+<br>
+Status:{{formularioServicio.status}}
+</pre>
+
+<pre>
+{{formularioServicio.value  |json}}
+</pre> -->
