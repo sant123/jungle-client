@@ -23,14 +23,14 @@ export class FormCitasComponent implements OnInit {
   ngOnInit(): void {
           // obtiene los datos del servicio que va traer lo que voy a mostrar en el select
 
-          this.detalleCitaService.getDetalleCita().subscribe((respuesta)=>{
-            this.detalleCita=respuesta;
+          // this.detalleCitaService.getDetalleCita().subscribe((respuesta)=>{
+          //   this.detalleCita=respuesta;
 
 
-            this.idCitaActualizar = this._route.snapshot.paramMap.get('id');
+          //   this.idCitaActualizar = this._route.snapshot.paramMap.get('id');
 
 
-          })
+          // })
 
           this.idCitaActualizar = this._route.snapshot.paramMap.get('id');
           if(this.idCitaActualizar!==null){
@@ -58,10 +58,7 @@ export class FormCitasComponent implements OnInit {
        }
 
 
-       get horasNovalido(){
-        return this.formularioCitas.get('horas')?.invalid && this.formularioCitas.get('horas')?.touched
-         }
-
+     
 
 
 
