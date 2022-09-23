@@ -11,7 +11,7 @@
                             <label for="nombreClub">Hora Cita</label>
                             <select class="form-select" aria-label="Default select example" formControlName="Hora" [class.is-invalid]="HoraNovalido">
                                 <option selected value="">Seleccione Hora Cita</option>
-                                <option value="horas" *ngFor="let hora of horas">{{hora}}</option>
+                                <option [value]="hora" *ngFor="let hora of horas">{{hora}}</option>
                             </select>
                             <small *ngIf="HoraNovalido" class="text-danger">Escoja una hora</small>
                         </div>
@@ -21,6 +21,36 @@
                             <label for="direccionClub">Fecha Cita</label>
                             <input type="date" class="form-control has-danger" placeholder="30/12/2022" formControlName="Fecha" [class.is-invalid]="FechaNovalido">
                             <small *ngIf="FechaNovalido" class="text-danger">Escoja una opcion</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="direccionClub">Sede</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="Sede" [class.is-invalid]="SedeNovalido">
+                                <option selected value="">Seleccione Sede</option>
+                                <option [value]="sede.direccion" *ngFor="let sede of sedes">{{sede.nombre}}</option>
+                            </select>
+                            <small *ngIf="SedeNovalido" class="text-danger">Escoja una opcion</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="direccionClub">Cliente</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="IdUsuarioAgenda" [class.is-invalid]="IdUsuarioAgendaNovalido">
+                                <option selected value="">Seleccione Cliente</option>
+                                <option [value]="cliente.id" *ngFor="let cliente of clientes">{{ cliente.nombre + " " + cliente.apellido }}</option>
+                            </select>
+                            <small *ngIf="IdUsuarioAgendaNovalido" class="text-danger">Escoja una opcion</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="direccionClub">Barbero</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="IdUsuarioAtiende" [class.is-invalid]="IdUsuarioAtiendeNovalido">
+                                <option selected value="">Seleccione Barbero</option>
+                                <option [value]="barbero.id" *ngFor="let barbero of barberos">{{ barbero.nombre + " " + barbero.apellido }}</option>
+                            </select>
+                            <small *ngIf="IdUsuarioAtiendeNovalido" class="text-danger">Escoja una opcion</small>
                         </div>
                     </div>
                 </div>
