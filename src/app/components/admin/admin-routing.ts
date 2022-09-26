@@ -36,6 +36,8 @@ export const ADMIN_ROUTES: Routes = [
      {path:'gestionarCitas',component:GestionarCitasComponent},
      {path: 'gestionarCitas/nuevo' , component:FormCitasComponent},
      {path: 'gestionarCitas/editar/:id' , component:FormCitasComponent},
+     {path: 'gestionarCitas/eliminar/:id' , component:FormCitasComponent},
+
 
 
 

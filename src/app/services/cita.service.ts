@@ -33,4 +33,8 @@ export class CitaService {
   getClientes() {
     return this.http.get(this.BaseUrl + '/Clientes');
   }
+
+  EliminarCita(formGroup: any) {
+    return this.http.delete(this.BaseUrl, formGroup);
+  }
 }

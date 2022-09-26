@@ -14,7 +14,10 @@ citas:any;
   ngOnInit(): void {
     this.citaService.getCita().subscribe((citaResultado)=>{
       this.citas = citaResultado;
+      console.log(this.citas);
+
     })
+
 
   }
 

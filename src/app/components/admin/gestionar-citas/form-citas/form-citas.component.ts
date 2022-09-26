@@ -168,13 +168,45 @@ export class FormCitasComponent implements OnInit {
     formData.append('IdUsuarioAgenda', this.formularioCitas.value.IdUsuarioAgenda);
     formData.append('IdUsuarioAtiende', this.formularioCitas.value.IdUsuarioAtiende);
 
-    this.citaService.insertarCita(formData).subscribe((respuesta) => {
-      Swal.fire('Se ha registrado', '', 'success').then((result) => {
-        //redirecciona al componente de gestionar Productos
-        this.router.navigate(['admin/gestionarCitas']);
-        this.formularioCitas.reset();
-      });
-    });
+
+
+
+
+      if(this.idCitaActualizar!==null){
+        formData.append("Id", this.idCitaActualizar);
+        this.citaService.ActualizarCita(formData).subscribe((resultado)=>{
+
+          Swal.fire('Se ha Actualizado', '', 'success').then(result=>{
+            //redirecciona al componente de gestionar Productos
+           this.router.navigate(['admin/gestionarCitas']);
+           this.formularioCitas.reset();
+         })
+
+       })
+      }
+      else{
+        this.citaService.insertarCita(formData).subscribe((respuesta) => {
+            Swal.fire('Se ha registrado', '', 'success').then((result) => {
+              //redirecciona al componente de gestionar Productos
+              this.router.navigate(['admin/gestionarCitas']);
+              this.formularioCitas.reset();
+
+       });
+      }
+
+
+      )}
+
+
+  }
+}
+    // this.citaService.insertarCita(formData).subscribe((respuesta) => {
+    //   Swal.fire('Se ha registrado', '', 'success').then((result) => {
+    //     //redirecciona al componente de gestionar Productos
+    //     this.router.navigate(['admin/gestionarCitas']);
+    //     this.formularioCitas.reset();
+    //   });
+    // });
 
     // if (this.idCitaActualizar !== null) {
     //   formData.append('Id', this.idCitaActualizar);
@@ -188,5 +220,3 @@ export class FormCitasComponent implements OnInit {
     // } else {
 
     // }
-  }
-}
