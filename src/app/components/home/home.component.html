@@ -13,6 +13,7 @@
                 <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
                 <li class="nav-item"><a class="nav-link" href="#team">Barberos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#produc">Productos</a></li>
                 <li class="nav-item"><a class="nav-link" [routerLink]="['login']">Iniciar Sesion</a></li>
             </ul>
         </div>
@@ -159,6 +160,8 @@
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Servicios de calidad</div>
+
+
                         <div class="portfolio-caption-subheading text-muted">Barberos especializados</div>
                     </div>
                 </div>
@@ -260,10 +263,11 @@
             <h2 class="section-heading text-uppercase">Barberos especializados</h2>
             <h3 class="section-subheading text-muted">Agenda tu cita, con el barbero de tu preferencia.</h3>
         </div>
+        <div class="img-bg">
         <div class="row">
             <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/imag/team/1.jpg" alt="..." />
+                <div id="item1" class="team-member">
+                    <img id="barberos" class="mx-auto rounded-circle" src="assets/imag/team/1.jpg" alt="..." />
                     <h4>Camilo Porras</h4>
                     <p class="text-muted">Especializado en barba y cejas</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -272,8 +276,8 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/imag/team/2.jpg" alt="..." />
+                <div id="item1" class="team-member">
+                    <img id="barberos" class="mx-auto rounded-circle" src="assets/imag/team/2.jpg" alt="..." />
                     <h4>Guillermo Fernandez</h4>
                     <p class="text-muted">Especializado en corte de cabello y barba</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -282,8 +286,8 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/imag/team/3.jpg" alt="..." />
+                <div  id="item1" class="team-member">
+                    <img id="barberos" class="mx-auto rounded-circle" src="assets/imag/team/3.jpg" alt="..." />
                     <h4>Cristian Mendoza</h4>
                     <p class="text-muted">Especializado en cortes de cabello</p>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -297,6 +301,7 @@
                 <p class="large text-muted">Te ofrecemos un corte de calidad y productos especializados para cuidar tu imagen personal</p>
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- Clients-->
@@ -409,6 +414,7 @@
         </div>
     </div>
 </footer>
+
 <!-- Portfolio Modals-->
 <!-- Portfolio item 1 modal popup-->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -522,12 +528,28 @@
                     <div class="col-lg-8">
                         <div class="modal-body">
                             <!-- Project details-->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="assets/imag/portfolio/4.jpg" alt="..." />
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
+                            <h2 class="text-uppercase">Corte de barba y cejas</h2>
+                            <p class="item-intro text-muted">Agenda tu cita, para ofrecerte un corte de calidad</p>
+                               
+                            <div class="corte1 d-block">
+                                    <img id="img-corte" class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte1.jpg" alt="..." />
+                                    <img id="img-corte" class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte2.jpg" alt="..." />
+                                    
+                  
+                                <div class="corte2 d-flex">
+                                    <img id="img-corte"  class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte2.jpg" alt="..." />
+                                    <img id="img-corte"  class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte4.jpg" alt="..." />
+                                    
+                                </div>
+                                <div class="corte3 d-flex">
+                                    <img id="img-corte"  class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte3.jpg" alt="..." />
+                                    <img id="img-corte"  class="img-fluid d-block mx-auto" src="assets/imag/portfolio/corte5.jpg" alt="..." />
+                                    
+                                </div>
+
+                            
+                            
+                                <ul class="list-inline">
                                 <li>
                                     <strong>Client:</strong> Lines
                                 </li>
@@ -537,7 +559,7 @@
                             </ul>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                               <i class="fas fa-times me-1"></i>
-                              Close Project
+                              Cerrar 
                           </button>
                         </div>
                     </div>
