@@ -22,7 +22,6 @@ import { RolesService } from 'src/app/services/roles.service';
   tipoDocumentos:any=null;
   idPersonaActualizar:any = null;
   usuarioXroles:any=null;
-  roles:any=null;
 
   // agrego el servicio en el constructor donde voy a llamar el select
   constructor(private personaService:PersonaService,private tipoDocumentoService:TipoDocumentoService,private _route:ActivatedRoute, private usuarioXrolService:UsuarioXrolService,private rolesService:RolesService,private router: Router) { }
@@ -57,11 +56,6 @@ import { RolesService } from 'src/app/services/roles.service';
     this.usuarioXrolService.getUsuarioXrol().subscribe((respuesta)=>{
       this.usuarioXroles = respuesta; })
 
-
-      this.rolesService.getRoles().subscribe((respuesta)=>{
-        this.roles = respuesta; })
-
-
     }
     get NombreNovalido(){
       return this.formularioPersona.get('Nombre')?.invalid && this.formularioPersona.get('Nombre')?.touched
@@ -94,9 +88,7 @@ import { RolesService } from 'src/app/services/roles.service';
                 return this.formularioPersona.get('NumeroDocumento')?.invalid && this.formularioPersona.get('NumeroDocumento')?.touched
                  }
 
-     get IdRolNovalido(){
-                return this.formularioPersona.get('IdRol')?.invalid && this.formularioPersona.get('IdRol')?.touched
-                   }
+
 
     createFormGroup() {
       //creacion del formulario de registro de personas
@@ -109,7 +101,6 @@ import { RolesService } from 'src/app/services/roles.service';
         Correo: new FormControl("",[Validators.required ,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
         FechaNacimiento: new FormControl("",[Validators.required,Validators.minLength(3), ]),
         NumeroDocumento: new FormControl("",[Validators.required,Validators.minLength(3), ]),
-        IdRol: new FormControl("",[Validators.required,]),
 
 
 
@@ -139,7 +130,6 @@ import { RolesService } from 'src/app/services/roles.service';
           formData.append("Correo", this.formularioPersona.value.Correo);
           formData.append("FechaNacimiento", this.formularioPersona.value.FechaNacimiento);
           formData.append("NumeroDocumento", this.formularioPersona.value.NumeroDocumento);
-          formData.append("IdRol", this.formularioPersona.value.IdRol);
 
 
 
@@ -167,16 +157,7 @@ import { RolesService } from 'src/app/services/roles.service';
 
        })
       }
-          ///hace que el servicio de registro se envie al back
-        // this.personaService.insertarPersonas(formData).subscribe((respuesta)=>{
 
-        //    Swal.fire('Se ha registrado', '', 'success').then(result=>{
-        //      //redirecciona al componente de gestionar Productos
-        //     this.router.navigate(['admin/gestionarPersona']);
-        //     this.formularioPersona.reset();
-        //   })
-
-        // })
 
         }
       })

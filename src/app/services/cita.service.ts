@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CitaService {
   readonly BaseUrl = 'https://localhost:44323/api/cita';
+
   constructor(private http: HttpClient) {}
 
   getCita() {
@@ -21,8 +22,7 @@ export class CitaService {
     //https://localhost:44324/api/persona -- nombre del controlador que quiero solicitar
     return this.http.get(this.BaseUrl + '/' + id);
   }
-
-  ActualizarCita(formGroup: any) {
+  ActualizarCita(formGroup:any) {
     return this.http.put(this.BaseUrl, formGroup);
   }
 
@@ -34,7 +34,7 @@ export class CitaService {
     return this.http.get(this.BaseUrl + '/Clientes');
   }
 
-  EliminarCita(formGroup: any) {
-    return this.http.delete(this.BaseUrl, formGroup);
+  EliminarCita(idCita: any) {
+    return this.http.delete(this.BaseUrl + '/' + idCita);
   }
 }
