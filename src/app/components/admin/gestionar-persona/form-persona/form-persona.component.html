@@ -78,31 +78,23 @@
                         <div class="form-group">
 
                             <label for="direccionClub">Fecha Nacimiento</label>
-                            <input type="text" class="form-control has-danger" placeholder="30/12/2022" formControlName="FechaNacimiento" [class.is-invalid]="FechaNacimientoNovalido">
+                            <input type="date" class="form-control has-danger" placeholder="30/12/2022" formControlName="FechaNacimiento" [class.is-invalid]="FechaNacimientoNovalido">
                             <small *ngIf="FechaNacimientoNovalido" class="text-danger">Escoja una opcion</small>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="col-6">
-                    <div class="form-group ">
-                        <label for="nombreClub">Rol</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="IdRol" [class.is-invalid]="IdRolNovalido">
-                          <small *ngIf="IdRolNovalido" class="text-danger">Escoja un rol</small>
->
-                        <option selected>Seleccione Rol</option>
-                        <option [value]="usuarioXrol.id" *ngFor="let usuarioXrol of roles">{{usuarioXrol.nombre}}</option>
-                      </select>
-                    </div>
-                </div>
+
 
                 <br>
                 <div class="row">
                     <div class="col-lg-12">
                         <!-- <button type="submit" class="btn waves-effect waves-light btn-block btn-info pull-right">Registrar</button> -->
 
+
                         <button type="submit" [disabled]="formularioPersona.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idPersonaActualizar === null ?'Registrar':'Actualizar'}}</button>
+
                     </div>
                 </div>
 

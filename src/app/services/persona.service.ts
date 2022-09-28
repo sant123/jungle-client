@@ -33,8 +33,8 @@ export class PersonaService {
     return this.http.put(this.BaseUrl, formGroup);
   }
 
-  // EliminarPersona(formGroup:any) {
-  //   return this.http.put(this.BaseUrl, formGroup);
-  // }
+  EliminarPersona(formGroup:any) {
+    return this.http.delete(this.BaseUrl, formGroup);
+  }
 
 }

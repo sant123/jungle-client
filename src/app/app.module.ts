@@ -36,6 +36,7 @@ import { UsuarioService } from './services/usuario.service';
 import { GestionarCitasComponent } from './components/admin/gestionar-citas/gestionar-citas.component';
 import { CitaService } from './services/cita.service';
 import { DetalleCitaService } from './services/detalleCita.service';
+import { EstadoService } from './services/estado.service';
 
 
 
@@ -78,7 +79,7 @@ import { DetalleCitaService } from './services/detalleCita.service';
     ReactiveFormsModule,
 
   ],
-  providers: [PersonaService,ServiciosService,ProductosService,TipoDocumentoService,TipoProductoService,InventarioService,MovimientoInventarioService,TipoMovimientoInventarioService, UsuarioXrolService,RolesService,UsuarioService,CitaService,DetalleCitaService],
+  providers: [PersonaService,ServiciosService,ProductosService,TipoDocumentoService,TipoProductoService,InventarioService,MovimientoInventarioService,TipoMovimientoInventarioService, UsuarioXrolService,RolesService,UsuarioService,CitaService,DetalleCitaService,EstadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

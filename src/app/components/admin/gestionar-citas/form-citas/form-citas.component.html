@@ -11,7 +11,7 @@
                             <label for="nombreClub">Hora Cita</label>
                             <select class="form-select" aria-label="Default select example" formControlName="Hora" [class.is-invalid]="HoraNovalido">
                                 <option selected value="">Seleccione Hora Cita</option>
-                                <option [value]="hora" *ngFor="let hora of horas">{{hora}}</option>
+                                <option [value]="hora.id" *ngFor="let hora of horas">{{hora.hora}}</option>
                             </select>
                             <small *ngIf="HoraNovalido" class="text-danger">Escoja una hora</small>
                         </div>
@@ -53,6 +53,16 @@
                             <small *ngIf="IdUsuarioAtiendeNovalido" class="text-danger">Escoja una opcion</small>
                         </div>
                     </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                          <label for="direccionClub">Estado</label>
+                          <select class="form-select" aria-label="Default select example" formControlName="IdEstado" [class.is-invalid]="IdEstadoNovalido">
+                              <option selected value="">Seleccione Estado</option>
+                              <option [value]="estado.id" *ngFor="let estado of estados">{{ estado.nombre }}</option>
+                          </select>
+                          <small *ngIf="IdEstadoNovalido" class="text-danger">Escoja una opcion</small>
+                      </div>
+                  </div>
                 </div>
                 <br>
                 <div class="col-lg-2">
