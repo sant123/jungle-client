@@ -74,6 +74,7 @@ export class FormCitasComponent implements OnInit {
     this.idCitaActualizar = this._route.snapshot.paramMap.get('id');
 
     if (this.idCitaActualizar !== null) {
+      this.idCitaActualizar = Number(this.idCitaActualizar);
       this.citaService
         .getCitaById(this.idCitaActualizar)
         .subscribe((cita: any) => {
@@ -220,6 +221,11 @@ export class FormCitasComponent implements OnInit {
     let permiteInsertar = true;
 
     for (let cita of this.citas) {
+
+      if (cita.id === this.idCitaActualizar) {
+        continue;
+      }
+
       if (
         cita.horaInicio === HoraInicio &&
         cita.horaFin === HoraFin &&
