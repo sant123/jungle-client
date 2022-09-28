@@ -66,6 +66,10 @@ export class MovimientoInventarioComponent implements OnInit {
     });
   }
 
+  volver() {
+    location.reload();
+  }
+
   registrarMovimientoInventario(){
     console.log(this.formularioMovimientoInventario)
 Swal.fire({

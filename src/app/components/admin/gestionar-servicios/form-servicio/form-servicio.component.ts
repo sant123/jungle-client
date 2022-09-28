@@ -67,6 +67,10 @@ export class FormServicioComponent implements OnInit {
     });
   }
 
+  volver() {
+    location.href = '/admin/gestionarServicios';
+  }
+
   registrarServicios(){
     //modal de validacion
     Swal.fire({
