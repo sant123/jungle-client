@@ -11706,7 +11706,12 @@ section#contact form#contactForm :-ms-input-placeholder {
     font-weight: bold;
     color: rgba(2, 0, 0, 0.961);
 }
-
+.vs{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(2, 0, 0, 0.961);
+}
 .carousel-item{
     max-width: 700px;
     max-height: 700px;
@@ -11722,5 +11727,38 @@ section#contact form#contactForm :-ms-input-placeholder {
 img{
     border-radius: 20px;
 }
+
+
+/* GA L E R I A  */
+
+/* GALERIA DE IMAGENES */
+/* .galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (350px, 1fr));
+}
+.galeria img{
+    width: 100%;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.galery{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 40px;
+
+}
+.linea{
+    background-color:#997800;
+    height: 5px;
+    width: 100%;
+    display: block;
+
+} */
 
 

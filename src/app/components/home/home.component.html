@@ -21,12 +21,12 @@
 </nav>
 <!-- Masthead-->
 <header class="masthead">
-    <div class="container">
+    <div class="container d-block">
         <div class="masthead-subheading mb-3">Bienvenido! Para disfrutar de nuestros servicios</div>
 
         <div class="masthead-heading text-uppercase mb-2">REGISTRATE</div>
 
-        <a class="btn btn-primary btn-xl text-uppercase" [routerLink]="['registroCliente']">Registrarse</a>
+        <a class="btn btn-primary btn-xl text-uppercase " [routerLink]="['registroCliente']">Registrarse</a>
     </div>
 </header>
 
@@ -145,6 +145,31 @@
         </div>
     </div>
 </section>
+
+
+    
+    <!-- <h1 class="galery">Galeria de imagenes</h1>
+    <span class="linea"></span>
+
+    <section class="galeria">
+        <a href="" src="#image1">
+            <img src="assets/imag/team/1.jpg" alt="">
+        </a>
+        <a href="" src="#image2">
+            <img src="assets/imag/team/2.jpg" alt="">
+        </a>
+        <a href="" src="#image3">
+            <img src="assets/imag/team/3.jpg" alt="">
+        </a>
+        <a href="" src="#image4">
+            <img src="assets/imag/team/4.jpg" alt="">
+        </a>
+        <a href="" src="#image5">
+            <img src="assets/imag/team/5.jpg" alt="">
+        </a>
+        <a href="" src="#image6"><img src="assets/imag/team/6.jpg" alt=""></a>
+    </section> -->
+
 
 <!-- About-->
 <h1 class="text-center mb-5">GALERIA DE IMAGENES</h1>
@@ -317,7 +342,7 @@
 <!-- Contact-->
 
 <section class="page-section" id="about">
-  <div class="container">
+  <div class="container mt-3">
     <div class="text-center">
       <h2 class="section-heading text-uppercase">Nosotros</h2>
       <h3 class="section-subheading text-muted">Somos una organización especializada en brindar un servicio de calidad a todos nuestros clientes</h3>
@@ -325,15 +350,15 @@
       <tr>
         <td>
           <h1>Misión</h1>
-          <img class="mx-auto rounded-circle mb-2" src="assets/imag/team/ms.jpg" alt="..." />
+          <img class="mx-auto rounded-circle mt-3" src="assets/imag/team/ms.jpg" alt="..." />
           <br>
-          <p class="ms">Somos una empresa dedicada al mejoramiento de la apariencia fisica de nuestros clientes, ofreciendo el mejor servicio, la mas alta calidad y con un personal altamente calificado, contamos con excelentes instalaciones donde nuestros clientes no solo obtienen un cote de cabello, si no también un espacio de entretenimiento, llegando a ser una de las mejores baberias en a ciudad de Bogotá y el área metropolitana.</p>
+          <p class="vs mt-3">Somos una empresa dedicada al mejoramiento de la apariencia fisica de nuestros clientes, ofreciendo el mejor servicio, la mas alta calidad y con un personal altamente calificado, contamos con excelentes instalaciones donde nuestros clientes no solo obtienen un cote de cabello, si no también un espacio de entretenimiento, llegando a ser una de las mejores baberias en a ciudad de Bogotá y el área metropolitana.</p>
         </td>
         <td>
           <h1>Visión</h1>
-          <img class="mx-auto rounded-circle mb-2" src="assets/imag/team/vs.jpg" alt="..." />
+          <img class="mx-auto rounded-circle mt-3" src="assets/imag/team/vs.jpg" alt="..." />
           <br>
-          <p class="vs">
+          <p class="vs mt-3">
             Ser la cadena de barberias #1 a nivel colombiano comprometièndonos con nuestros clientes y colaboradores ofreciendo un servicio con los mejores estándares de calidad, innovando día a día para su máxima satisfacción y comodidad. Además dar a conocer nuestr talento por muchas partes siendo primordial en le eje.
           </p>
         </td>
@@ -342,14 +367,19 @@
     </div>
   </div>
 </section>
-<section class="page-section contact3" id="">
-    <div class="container">
+<!-- <section class="page-section contact3" id="">
+    <div class="container d-block">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase d-flex">Mapa</h2>
-        </div>
-        <br>
+            <h2 class="section-heading text-uppercase">Ubicación</h2>
+        </div> -->
+        <section class="page-section" id="">
+            <div class="container mt-3">
+              <div class="text-center">
+                <h2 class="section-heading text-uppercase">Ubicación</h2>
+        <div class="mapa text-center mt-5">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0069660496074!2d-74.13968484035505!3d4.592771827143561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ed965f40f91%3A0x91b63b54d0753e8a!2sDg.%2047a%20Sur%20%2353a-24%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1664514563048!5m2!1ses!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+        </div>
+    </div>
     </div>
 </section>
 
@@ -358,7 +388,7 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Contactanos</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Agenda tu cita y mejora tu imagen</h3>
         </div>
         <!-- * * * * * * * * * * * * * * *-->
         <!-- * * SB Forms Contact Form * *-->
@@ -614,12 +644,12 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <div class="modal-body d-flex">
+                        <div class="modal-body">
                             <!-- Project details-->
-                                                           
+                            <div class="titulo">BARBAS</div>       
                                         <div class="caja caja1"> 
                                             <img src="assets/imag/cortes/barba1.jpg">
-                                            <p>Shampoo</p>
+                                            <p>Barba</p>
                                             <p>Precio: S/ 25.000 </p>
                                             <!-- <div class="capa">
                                                 <img src="img/shampoo.jpg">
@@ -627,7 +657,7 @@
                                         </div>
                                     <div class="caja caja2"> 
                                         <img src="assets/imag/cortes/barba2.jpg">
-                                        <p>Producto 2</p>
+                                        <p>Barba</p>
                                         <p>Precio: S/ 20.000 </p> 
                                         <!-- <div class="capa">
                                             <img src="img/sampoo1.jpg">
@@ -635,12 +665,13 @@
                                     </div>
                                     <div class="caja caja3"> 
                                         <img src="assets/imag/cortes/barba3.jpg">
-                                        <p>Producto 3</p>
+                                        <p>Barba</p>
                                         <p>Precio: S/ 18.000 </p> 
                                         <!-- <div class="capa">
                                             <img src="img/sampoo1.jpg">
                                         </div> -->
                                     </div>
+                                
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                               <i class="fas fa-times me-1"></i>
                               Cerrar
@@ -670,11 +701,6 @@
                                 <p>Precio: S/ 25.000 </p>
                             </div>
 
-
-                            
-                            
-                           
-                            
                             
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                               <i class="fas fa-times me-1"></i>
@@ -698,15 +724,15 @@
                         <div class="modal-body">
                             <!-- Project details-->
                             <div class="caja caja1"> 
-                                <h2 class="text-uppercase">Servicios de limpieza facial</h2>
-                                <h5  class="item-intro text-muted">Cuida tu rostro, recuerda es tu imagen principal</h5>
-                                <img id="lpf" class="img-fluid d-block mx-auto " src="assets/imag/cortes/lpf1.jpg" alt="..." />
-                                <h5>Servicios especializados de limpieza facial para dama y caballero.</h5>
-                                <p>Precio: S/ 25.000 </p>
+                                <h2 class="text-uppercase">Servicios de calidad</h2>
+                                <h5  class="item-intro text-muted">Exelentes cortes, que esperas para agendar el tuyo?</h5>
+                                <img id="lpf" class="img-fluid d-block mx-auto " src="assets/imag/cortes/service.jpg" alt="..." />
+                                <h5>Servicios especializados de corte de barba y cabello más limpieza facial.</h5>
+                                
                             </div>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                               <i class="fas fa-times me-1"></i>
-                              Close Project
+                              Cerrar
                           </button>
                         </div>
                     </div>
