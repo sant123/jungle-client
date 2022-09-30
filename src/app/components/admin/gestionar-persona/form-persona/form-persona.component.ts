@@ -89,6 +89,10 @@ import { RolesService } from 'src/app/services/roles.service';
                  }
 
 
+                 volver() {
+                  location.href = '/admin/gestionarPersona';
+                }
+
 
     createFormGroup() {
       //creacion del formulario de registro de personas

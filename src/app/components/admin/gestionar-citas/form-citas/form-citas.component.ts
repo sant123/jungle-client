@@ -176,7 +176,9 @@ export class FormCitasComponent implements OnInit {
       this.formularioCitas.get('IdEstado')?.touched
     );
   }
-
+  volver() {
+    location.href = '/admin/gestionarCitas';
+  }
   createFormGroup() {
     return new FormGroup({
       Hora: new FormControl('', [Validators.required]),

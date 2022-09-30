@@ -37,11 +37,17 @@
             </li>
 
 
-            <li class="sidebar-item" [routerLinkActive]="['active']" *ngIf="infoUser.rol=='Administrador'|| infoUser.rol=='Barbero'|| infoUser.rol=='Cliente'">
+            <!-- <li class="sidebar-item" [routerLinkActive]="['active']" *ngIf="infoUser.rol=='Administrador'|| infoUser.rol=='Barbero'|| infoUser.rol=='Cliente'">
                 <a class="sidebar-link" [routerLink]="['gestionarCitas']">
                     <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Gestionar Citas</span>
                 </a>
-            </li>
+            </li> -->
+
+            <li class="sidebar-item" [routerLinkActive]="['active']" *ngIf="infoUser.rol=='Administrador'|| infoUser.rol=='Barbero'|| infoUser.rol=='Cliente'">
+              <a class="sidebar-link" [routerLink]="['gestionarCitas/nuevo']">
+                  <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Gestionar Citas</span>
+              </a>
+          </li>
 
         </ul>
 

@@ -69,7 +69,9 @@ export class FormProductoComponent implements OnInit {
              }
 
 
-
+             volver() {
+              location.href = '/admin/gestionarProductos';
+            }
 
 
   createFormGroup() {

@@ -38,7 +38,9 @@ get NombreNovalido(){
   return this.formularioInventario.get('Nombre')?.invalid && this.formularioInventario.get('Nombre')?.touched
    }
 
-
+   volver() {
+    location.href = '/admin/gestionarInventario';
+  }
 createFormGroup() {
   //creacion del formulario de registro de productos
   return new FormGroup({
