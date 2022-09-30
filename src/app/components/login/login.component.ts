@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
        })
       }else{
         localStorage.setItem('userData',JSON.stringify(dataUsuario))
-        this.router.navigate(['../admin/gestionarPersona']);
+        this.router.navigate(['../admin/gestionarCitas/nuevo']);
       }
 
     })

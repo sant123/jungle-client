@@ -65,9 +65,16 @@
                   </div>
                 </div>
                 <br>
-                <div class="col-lg-2">
+                <div class="row">
+                <div class="col-lg-3">
                     <button type="submit" [disabled]="formularioCitas.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idCitaActualizar === null ?'Registrar':'Actualizar'}}</button>
                 </div>
+                <div class="col-lg-3">
+                  <button type="button" class="btn waves-effect waves-light btn-block btn-info pull-left" (click)="volver()">Volver
+
+                  </button>
+              </div>
+              </div>
             </form>
         </div>
     </div>

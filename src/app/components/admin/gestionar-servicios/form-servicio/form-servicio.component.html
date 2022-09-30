@@ -40,10 +40,14 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <button type="submit" [disabled]="formularioServicio.invalid" class="btn waves-effect waves-light btn-block btn-info pull-right">{{idServiciosActualizar === null ?'Registrar':'Actualizar'}}</button>
-                    </div>    
-                    <div class="col-lg-2">
-                        <button type="button" class="btn waves-effect waves-light btn-block btn-info pull-right" (click)="volver()">Volver</button>
                     </div>
+                    <div class="col-lg-2">
+                        <button type="button" class="btn waves-effect waves-light btn-block btn-info pull-right" (click)="volver()">Volver
+                                                  <!-- <input type="button" class="btn btn-primary pull-left" value="Volver" (click)="gestionarPersona()"> -->
+
+                        </button>
+                    </div>
+
                 </div>
 
             </form>
